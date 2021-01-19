@@ -1,0 +1,113 @@
+.navbar {
+  background-color: black;
+  /* position: fixed; */
+}
+/* .global-nav{
+  position: fixed;
+  z-index: 1000;
+} */
+.o-dropdown-menu {
+  background-color: black;
+  margin-left: 20px;
+  width: 200px;
+  padding: 0;
+}
+.dropdown-item {
+  color: white;
+}
+.dropdown-item:hover {
+  background-color: rgba(226, 226, 226, 0.342);
+  color: white;
+}
+/* #genre-dropdown{
+  background-color: black;
+  color: white;
+} */
+/* search component */
+.fa-search {
+  width: 10px;
+  margin-right: 20px;
+  color: #6babcf;
+}
+.fa-search:hover {
+  cursor: pointer;
+}
+
+#search-bar {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  border-radius: 10px;
+  background: black;
+  padding: 5px 3px 5px 10px;
+  border: 1px solid gray;
+  color: white;
+  height: 40px;
+  margin: 5px 1px 3px 0px;
+  width: 400px;
+}
+#search-bar:focus {
+  box-shadow: 0 0 5px #8ad4ff;
+  border: 1px solid #8ad4ff;
+}
+#search-bar:focus .fa-search {
+  color: #8ad4ff;
+}
+#search-bar::content{
+  content: "";
+} 
+/* spinner styling */
+.spinner {
+  color: #8ad4ff;  
+  width: 25px;
+  height: 23px;
+  margin-bottom: -100px;
+  display: none;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+/* sign in up btn */
+
+/* .sign-btn {
+  outline: #8ad4ff;
+  color: #8ad4ff;
+  border: 1px solid #8ad4ff;
+  font-size: 19px;
+  height: 40px;
+}
+.sign-btn:hover {
+  color: #6babcf;
+} */
+Link{
+  text-decoration: none;
+}
+.d-flex{
+  display: flex;
+}
+.searchBox-parent-div{
+  margin-right: 20px;
+
+}
+.dropdown-options{
+
+}

@@ -1,0 +1,30 @@
+.main {
+  padding-left: 20px;
+  width:auto;
+  position: relative;
+  margin-top: 78px;
+  height: 1500px;
+}
+.parent-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.child-flex-item{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 350px;
+  justify-content: space-evenly;
+}
+.rating{
+  color : red;
+}
+.label-back-card{
+  font-size: 20px;
+}
