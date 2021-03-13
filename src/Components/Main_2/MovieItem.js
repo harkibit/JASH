@@ -5,9 +5,8 @@ import 'semantic-ui-css/semantic.min.css'
 // import 'animate.min.css';
 import { Form, Grid, Transition } from 'semantic-ui-react'
 import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
-
+import {Link} from 'react-router-dom'
 function MovieItem({movie}) {
-
     let imageBaseUrl = "https://image.tmdb.org/t/p/w200";
     const readmore_btn_style = {
         outline: "#8ad4ff",
@@ -26,9 +25,7 @@ function MovieItem({movie}) {
     }
     // const pulse_anim = useState()
     
-
     const decoratedOnClick = useAccordionToggle();
-
     return (
         <>
         
@@ -47,7 +44,6 @@ function MovieItem({movie}) {
                                 </Label> <br/><br/>
                                 {movie.title}
                             </List.Item>
-
                             <List.Item>
                                 <Label style = {label_style} horizontal >                                
                                     <span className = "label-back-card">Rating : </span>
@@ -64,9 +60,9 @@ function MovieItem({movie}) {
                                 </Label><br/><br/>
                                 {movie.release_date}
                             </List.Item>
-
+                    <Link to={`/moviePage/${movie.id}`}>
                             <button type="button" className="btn btn-outline " style = {readmore_btn_style} onClick={decoratedOnClick}> Read More </button>
-
+                    </Link>         
                         </div>
                     </Reveal.Content>
                 </Reveal>
@@ -75,5 +71,4 @@ function MovieItem({movie}) {
     </>
     )
 }
-
 export default MovieItem

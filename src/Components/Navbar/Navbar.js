@@ -20,7 +20,10 @@ export default function Navbar(props) {
     )}`;
     fetch(TMDB_BASE_URL)
     .then(resp => resp.json())
-    .then(data => {setGenresNamesArray(data.genres)});
+    .then(data => {
+      console.log(data) 
+      setGenresNamesArray(data.genres)}
+    );
     },[]
   )
 
