@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import { Icon, Input, Popup } from 'semantic-ui-react';
-import 'semantic-ui-css/semantic.min.css';
 import Spinner from 'react-bootstrap/Spinner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css'

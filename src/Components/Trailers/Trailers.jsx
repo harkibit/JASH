@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 export default function Trailers({ movieID }) {
   const [trailer, setTrailer] = useState([]);
   const TMDB_BASE_URL = "https://api.themoviedb.org/3";

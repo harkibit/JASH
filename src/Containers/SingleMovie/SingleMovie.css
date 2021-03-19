@@ -1,0 +1,19 @@
+.moviePage {
+  margin-top: 78px;
+  display: flex;
+  justify-content: space-between;
+}
+.margins {
+  margin-top: 100px;
+}
+.column2 {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 900px;
+}
+.image-size{
+    height: 300px;
+    width: 500px;
+  }

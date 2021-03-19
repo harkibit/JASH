@@ -1,35 +1,40 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles.css";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer";
-import Main2 from "./Components/Main_2/Main_2";
-import MoviePage from './Components/Main_2/MoviePage'
-import Registration from "./Components/Navbar/Registration"
-import { BrowserRouter as Router , Switch, Route} from "react-router-dom";
-import Loader from "./Components/Loading"
-import Trailers from "./Components/Main_2/Trailers";
+import "semantic-ui-css/semantic.min.css";
+
+import Navbar from "./Components/Navbar/Navbar.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
+import MoviePage from "./Containers/SingleMovie/SingleMovie.jsx";
+import Home from "./Containers/Home/Home"
 
 export default function App() {
-    const [movies, setMovies] = useState("")
-    const [query, setQuery] = useState("");
- 
-    function handleQuery(query) {
-        setQuery(query);
-      }
-    function handleMovies(movies){
-      setMovies(movies);
-    }
+  const [movies, setMovies] = useState("");
+  const [query, setQuery] = useState("");
+
+  function handleQuery(query) {
+    setQuery(query);
+  }
+  function handleMovies(movies) {
+    setMovies(movies);
+  }
 
   return (
     <Router>
       <div className="App dark-mode">
-            <Navbar handleQuery={handleQuery} query={query}  handleMovies={handleMovies} />
-              <Switch>
-                <Route path = "/movie/trailers" component = {Trailers}/>
-                <Route exact path="/" component={() => <Main2 query= {query} movies={movies}/> } />
-                <Route path="/register" component={Registration}/>
-                  < Route path = "/moviePage/:id" exact component = {MoviePage}/>
-              </Switch>          
+        <Navbar
+          handleQuery={handleQuery}
+          query={query}
+          handleMovies={handleMovies}
+        />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={() => <Home query={query} movies={movies} />}
+          />
+          <Route path="/moviePage/:id" exact component={MoviePage} />
+        </Switch>
         <Footer />
       </div>
     </Router>

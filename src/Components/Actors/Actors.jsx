@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+
 export default function Actors({ movieID }) {
   const [actors, setActors] = useState([]);
   const TMDB_BASE_URL = "https://api.themoviedb.org/3";
