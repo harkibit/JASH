@@ -1,6 +1,5 @@
 import React,{useEffect, useState} from 'react';
 import SearchBar from "./SearchBar.js";
-import logo from "../JASH.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Genres from "./Genres.js";
@@ -9,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import Search from "./Search.js"
+import logo from "../../assets/JASH.png"
 
 export default function Navbar(props) {    
 
@@ -73,23 +73,12 @@ export default function Navbar(props) {
               </Link>
 
               <li className="nav-item dropdown">
-                {/* <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Genres
-                </a> */}
 
               < Genres genre = { genresNamesArray } handleMovies = { props.handleMovies } /> 
               </li>
             </ul>
 
             <SearchBar  genre = { genresNamesArray } query={props.query} handleQuery={props.handleQuery} handleMovies={props.handleMovies} />
-            {/* <Search/> */}
             
             <Link to="/register">
               <form className="d-flex">
