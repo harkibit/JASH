@@ -1,4 +1,4 @@
-# Discover North Lebanon
+# Movie JASH
 
 Movie JASH is a web application built with reactjs. It shows all popular movies with their trailers.
 
