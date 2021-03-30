@@ -5,6 +5,8 @@ JASH is a movie web application built with reactjs. It shows all popular movies 
 ## Screenshots
 
 ![home page](./src/assets/movies-sc.png)
+![filter](./src/assets/filter.png)
+![movie info + trailer](./src/assets/trailerInfo.png)
 ## Features
 
 - Fetch and list popular movies
