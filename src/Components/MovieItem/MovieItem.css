@@ -1,30 +1,16 @@
-.child-flex-item{
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-  .card-back{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    height: 350px;
-    justify-content: space-evenly;
-  }
-  .label-back-card{
-    font-size: 20px;
-  }
-  .btn-style {
-    outline: #8ad4ff;
-    color: #8ad4ff;
-    border-color: #8ad4ff;
-    font-size: 19px;
-    height: 40px;
-  }
-  .btn-style {
-    outline: #8ad4ff;
-    color: #8ad4ff;
-    border-color: #8ad4ff;
-    font-size: 19px;
-    height: 40px;
-  }
+.child-flex-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 350px;
+  justify-content: space-evenly;
+}
+.label-back-card {
+  font-size: 20px;
+}

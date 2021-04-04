@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Image, Reveal } from "semantic-ui-react";
+import "./Actors.css";
 
 export default function Actors({ movieID }) {
   const [actors, setActors] = useState([]);
@@ -10,12 +12,27 @@ export default function Actors({ movieID }) {
   };
   useEffect(() => {
     fetch(constructUrl(`movie/${movieID}/credits`))
-      .then((response) => response.json())
-      .then((data) =>{ setActors(data?.cast)
-    console.log(data)},[]);
-      console.log(actors)
-  },[]);
+      .then((res) => res.json())
+      .then((data) => {
+        setActors(data?.cast);
+      }, []);
+  }, []);
   return (
-  <div></div>
+    <div className="actors">
+      {actors &&
+        actors.map((actor) => {
+          console.log(actor.name)
+          return (
+            <Reveal animated="small fade">
+              <Reveal.Content visible>
+                <span>{actor.name}</span>
+              </Reveal.Content>
+              <Reveal.Content hidden>
+                <Image src="/images/wireframe/square-image.png" size="small" />
+              </Reveal.Content>
+            </Reveal>
+          );
+        })}
+    </div>
   );
 }

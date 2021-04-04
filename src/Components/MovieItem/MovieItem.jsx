@@ -5,6 +5,7 @@ import "semantic-ui-css/semantic.min.css";
 import { Transition } from "semantic-ui-react";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 
 function MovieItem({ movie }) {
   let imageBaseUrl = "https://image.tmdb.org/t/p/w200";
@@ -65,13 +66,7 @@ function MovieItem({ movie }) {
                   {movie.release_date}
                 </List.Item>
                 <Link to={`/moviePage/${movie.id}`}>
-                  <button
-                    type="button"
-                    className="btn btn-outline btn-style"
-                    onClick={decoratedOnClick}
-                  >
-                    See More
-                  </button>
+                  <Button text = "See more" onClick = {decoratedOnClick}/>
                 </Link>
               </div>
             </Reveal.Content>

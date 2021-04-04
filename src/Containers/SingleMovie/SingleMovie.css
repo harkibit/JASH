@@ -2,22 +2,32 @@
   width : 100vw;
   min-height : 100vh;
   background-color: black;
+  display: flex;
+  flex-direction: column;
 }
 
 .moviePage-child{
-  padding-top: 180px;
+  width : 80%;
+  padding: 180px 0 0 5vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap : 5vw;
+  grid-template-columns: 1fr 4fr;
+  gap : 3vw;
 }
 .column2 {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width : 90%;
+  width : 100%;
   justify-content: space-around;
 }
 .date-rate{
   display: flex;
   justify-content: space-between;
+  font-size: 1.2em;
+}
+.title{
+  font-size: 4vw;
+}
+.overview{
+  font-size: 1.2em;
 }

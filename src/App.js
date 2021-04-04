@@ -5,9 +5,9 @@ import "semantic-ui-css/semantic.min.css";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import MoviePage from "./Containers/SingleMovie/SingleMovie.jsx";
-import Home from "./Containers/Home/Home"
-import About from "./Containers/About/About"
-import "./App.css"
+import Home from "./Containers/Home/Home";
+import About from "./Containers/About/About";
+import "./App.css";
 
 export default function App() {
   const [movies, setMovies] = useState("");
@@ -35,7 +35,7 @@ export default function App() {
             component={() => <Home query={query} movies={movies} />}
           />
           <Route path="/moviePage/:id" exact component={MoviePage} />
-          <Route path="/about" exact component={About} />
+          <Route path="/about" component={About} />
         </Switch>
         <Footer />
       </div>

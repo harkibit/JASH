@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Trailers from "../../Components/Trailers/Trailers";
 import Actors from "../../Components/Actors/Actors";
-import { Icon } from "semantic-ui-react";
+import { Icon, Image } from "semantic-ui-react";
 import Keywords from "../../Components/Keywords/Keywords"
 import "./SingleMovie.css";
+import Button from "../../Components/Button/Button";
 
 function SingleMovie() {
   const [thatMovie, setThatMovie] = useState();
@@ -20,20 +21,27 @@ function SingleMovie() {
       .then((response) => response.json())
       .then((data) => {
         setThatMovie(data);
+        console.log(data.poster_path)
       });
   }, []);
+
+  let imageBaseUrl = "https://image.tmdb.org/t/p/w200";
+
+  const style = {
+    backgroundSize: "cover",
+    backgroundImage : `url(${imageBaseUrl}+${thatMovie?.poster_path})`
+  }
   return (
-    <div className="single-movie-page">
+    <div className="single-movie-page" style = {style}>
       {thatMovie && (
         <div className="moviePage">
           <div className="moviePage-child">
-            <Trailers movieID={id} />
+            <Image src = {imageBaseUrl + thatMovie?.poster_path}/>
             <div className="column2">
               <div>
-                <h1>{thatMovie?.title}</h1>
+                <h1 className = "title">{thatMovie?.title}</h1>
                 <Keywords movieID = {id}/>
               </div>
-              <span>{thatMovie?.overview}</span>
               <div class = "date-rate">
                 <span>
                   <Icon name="calendar alternate" />
@@ -44,9 +52,15 @@ function SingleMovie() {
                   <b>Popularity:</b> {thatMovie?.vote_average}
                 </span>
               </div>
+              <span className = "overview">{thatMovie?.overview}</span>
+              <div className = "date-rate">
+                <Button text = {<Icon name = 'play'/> + " Watch trailer"}/>
+                <Button text = "See all actors"/>
+              </div>
             </div>
           </div>
-          {/* <Actors movieID={id} /> */}
+          <Actors movieID={id} />
+          <Trailers movieID={id} />
         </div>
       )}
     </div>
