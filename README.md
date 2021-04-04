@@ -1,6 +1,6 @@
 # JASH
 
-JASH is a movie web application built with reactjs. It shows all popular movies with their trailers.
+JASH is a movie web based application, it shows all popular movies with their trailers.
 Built with Reactjs and SemanticUI CSS
 
 ## Screenshots
