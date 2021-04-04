@@ -20,7 +20,7 @@ Built with Reactjs and SemanticUI CSS
 Clone the Github repository and use npm to install the dependencies
 
 ```
-git clone https://github.com/harkibit/movie-project-JASH.git
+https://github.com/harkibit/JASH.git
 cd movie-project
 npm i
 npm start
