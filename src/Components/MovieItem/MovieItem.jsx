@@ -8,13 +8,6 @@ import { Link } from "react-router-dom";
 
 function MovieItem({ movie }) {
   let imageBaseUrl = "https://image.tmdb.org/t/p/w200";
-  const readmore_btn_style = {
-    outline: "#8ad4ff",
-    color: "#8ad4ff",
-    borderColor: "#8ad4ff",
-    fontSize: 19 + "px",
-    height: 40 + "px",
-  };
   const label_style = {
     backgroundColor: "#6babcf",
   };
@@ -74,12 +67,10 @@ function MovieItem({ movie }) {
                 <Link to={`/moviePage/${movie.id}`}>
                   <button
                     type="button"
-                    className="btn btn-outline "
-                    style={readmore_btn_style}
+                    className="btn btn-outline btn-style"
                     onClick={decoratedOnClick}
                   >
-                    {" "}
-                    Read More{" "}
+                    See More
                   </button>
                 </Link>
               </div>

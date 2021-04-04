@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Trailers from "../../Components/Trailers/Trailers";
 import Actors from "../../Components/Actors/Actors";
-import { Grid } from "semantic-ui-react";
-// import "./Main_2.css";
-import "./SingleMovie.css"
+import { Icon } from "semantic-ui-react";
+import Keywords from "../../Components/Keywords/Keywords"
+import "./SingleMovie.css";
 
 function SingleMovie() {
   const [thatMovie, setThatMovie] = useState();
   const { id } = useParams();
-  const IMG_URL = "https://image.tmdb.org/t/p/w500";
   const TMDB_BASE_URL = "https://api.themoviedb.org/3";
   const constructUrl = (path) => {
     return `${TMDB_BASE_URL}/${path}?api_key=${atob(
@@ -27,23 +26,26 @@ function SingleMovie() {
     <div className="single-movie-page">
       {thatMovie && (
         <div className="moviePage">
-          <Grid className="moviePage">
-            <Grid.Row className="margins">
-              <Grid.Column width={4}>
-                <Trailers movieID={id} />
-              </Grid.Column>
-
-              <Grid.Column width={4}>
-                <div className="column2">
-                  Release Date: {thatMovie?.release_date} <br />
-                  <br />
-                  {thatMovie?.overview} <br />
-                  <br />
-                  Rating: {thatMovie?.vote_average}
-                </div>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
+          <div className="moviePage-child">
+            <Trailers movieID={id} />
+            <div className="column2">
+              <div>
+                <h1>{thatMovie?.title}</h1>
+                <Keywords movieID = {id}/>
+              </div>
+              <span>{thatMovie?.overview}</span>
+              <div class = "date-rate">
+                <span>
+                  <Icon name="calendar alternate" />
+                  <b>Release Date:</b> {thatMovie?.release_date}
+                </span>
+                <span>
+                  <Icon name="star" />
+                  <b>Popularity:</b> {thatMovie?.vote_average}
+                </span>
+              </div>
+            </div>
+          </div>
           {/* <Actors movieID={id} /> */}
         </div>
       )}

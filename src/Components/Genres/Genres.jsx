@@ -47,7 +47,6 @@ export default function Genres(props) {
             </option>
           );
         })}
-        Genres
       </select>
     </div>
   );

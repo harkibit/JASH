@@ -1,0 +1,70 @@
+* {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 20px;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  background-color: black;
+}
+.footer {
+  margin-top: 100px;
+}
+/* dark - light mode */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+.dark-mode {
+  color: white;
+}
+
+#footerStyle1 {
+  visibility: visible;
+  animation-name: fadeInUp;
+}
+
+#footerStyle2 {
+  visibility: visible;
+  animation-name: fadeInDown;
+}
+
+.logo {
+  width: 90px;
+  height: 75px;
+  margin: -5px 20px -5px 5px;
+  cursor: pointer;
+}
+.fadeInUp {
+  visibility: visible;
+  animation-name: fadeInUp;
+}
+
+.fadeInDown {
+  visibility: visible;
+  animation-name: fadeInDown;
+}
+.social-media-p {
+  display: flex;
+  justify-content: space-around;
+}
+.social-media-icons {
+  color: #8ad4ff;
+}
+.social-media-icons:hover {
+  color: #6babcf;
+}
+.d-space-around {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.raoufIcon {
+  margin: 10px;
+}
+.font-size {
+  font-size: 25px;
+}
