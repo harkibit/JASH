@@ -5,7 +5,7 @@ Built with Reactjs and SemanticUI CSS
 
 ## Screenshots
 
-![home page](./src/assets/movies-sc.png)
+![home page](./src/assets/home.png)
 ![movie info + trailer](./src/assets/trailer.png)
 ## Features
 
