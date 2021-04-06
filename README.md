@@ -6,8 +6,7 @@ Built with Reactjs and SemanticUI CSS
 ## Screenshots
 
 ![home page](./src/assets/movies-sc.png)
-![filter](./src/assets/filter.png)
-![movie info + trailer](./src/assets/trailerInfo.png)
+![movie info + trailer](./src/assets/trailer.png)
 ## Features
 
 - Fetch and list popular movies

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Button, Header, Icon, Modal } from "semantic-ui-react";
-import "./Trailers.css"
-export default function Trailers({ movieID }) {
-  const [open, setOpen] = React.useState(false);
+import { Modal, Embed } from "semantic-ui-react";
+import "./Trailers.css";
+
+export default function Trailers({ movieID, open, setClose }) {
   const [trailer, setTrailer] = useState([]);
   const TMDB_BASE_URL = "https://api.themoviedb.org/3";
   const constructUrl = (path) => {
@@ -18,22 +18,15 @@ export default function Trailers({ movieID }) {
 
   return (
     <div>
-      <Modal
-        closeIcon
-        open={open}
-        trigger={<Button>Show Modal</Button>}
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-        size = "fullscreen"
-      >
+      <Modal closeIcon open={open} onClose={setClose} size="fullscreen">
         <Modal.Content>
-          <iframe
-            width="1300"
-            height="650"
-            src={`https://www.youtube.com/embed/${trailer.key}`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+          <Embed
+            id="O6Xo21L0ybE"
+            placeholder="Trailer"
+            src="youtube"
+            hd={true}
+            aspectRatio="2:5"
+            url={`https://www.youtube.com/embed/${trailer.key}`}
           />
         </Modal.Content>
       </Modal>

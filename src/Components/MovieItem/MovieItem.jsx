@@ -3,7 +3,6 @@ import "./MovieItem.css";
 import { Image, Reveal, Rating, Label, List } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import { Transition } from "semantic-ui-react";
-import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
@@ -18,7 +17,6 @@ function MovieItem({ movie }) {
     visible: true,
   };
 
-  const decoratedOnClick = useAccordionToggle();
   return (
     <>
       <Transition animation={animation}>
@@ -66,7 +64,7 @@ function MovieItem({ movie }) {
                   {movie.release_date}
                 </List.Item>
                 <Link to={`/moviePage/${movie.id}`}>
-                  <Button text = "See more" onClick = {decoratedOnClick}/>
+                  <Button text = "See more"/>
                 </Link>
               </div>
             </Reveal.Content>

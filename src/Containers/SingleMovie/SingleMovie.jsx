@@ -9,6 +9,10 @@ import Button from "../../Components/Button/Button";
 
 function SingleMovie() {
   const [thatMovie, setThatMovie] = useState();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
   const { id } = useParams();
   const TMDB_BASE_URL = "https://api.themoviedb.org/3";
   const constructUrl = (path) => {
@@ -54,13 +58,13 @@ function SingleMovie() {
               </div>
               <span className = "overview">{thatMovie?.overview}</span>
               <div className = "date-rate">
-                <Button text = {<Icon name = 'play'/> + " Watch trailer"}/>
+                <Button text = " Watch trailer" onClick = {handleOpen}/>
                 <Button text = "See all actors"/>
               </div>
             </div>
           </div>
           <Actors movieID={id} />
-          <Trailers movieID={id} />
+          <Trailers movieID={id} open = {open} setClose = {() => setOpen(false)}/>
         </div>
       )}
     </div>
