@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/JASH.png";
+import FooterIcons from "../FooterIcons/FooterIcons";
 import "./Footer.css";
 
 const teams = [
@@ -43,7 +44,11 @@ export default function Footer() {
             <div className="col-md-4 col-lg-3 footer-social wow fadeInUp animated">
               <h3>Follow us</h3>
               <br />
-              <Icons />
+              <p className="social-media-p">
+                <FooterIcons teams = {teams} act = "github"/>
+                <FooterIcons teams = {teams} act = {teams.linkedin}/>
+                <FooterIcons teams = {teams}/>
+              </p>
             </div>
           </div>
         </div>
@@ -52,39 +57,3 @@ export default function Footer() {
   );
 }
 
-function Icons() {
-  return (
-    <p className="social-media-p">
-      <div className="d-space-around">
-        {teams &&
-          teams.map((git) => (
-            <a href={git.github} className="social-media-icons raoufIcon">
-              <i className="fab fa-github"></i>
-            </a>
-          ))}
-      </div>
-
-      <div className="d-space-around">
-        {teams &&
-          teams.map((lkn) => (
-            <a
-              href={lkn.linkedin}
-              target="_blank"
-              className="social-media-icons raoufIcon"
-            >
-              <i className="fab fa-linkedin"></i>
-            </a>
-          ))}
-      </div>
-
-      <div className="d-space-around">
-        {teams &&
-          teams.map((insta) => (
-            <a href={insta.instagram} className="social-media-icons raoufIcon">
-              <i className="fab fa-instagram"></i>
-            </a>
-          ))}
-      </div>
-    </p>
-  );
-}
