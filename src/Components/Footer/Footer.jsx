@@ -1,6 +1,13 @@
 import React from "react";
-import logo from "../../assets/JASH.png"
-import "./Footer.css"
+import logo from "../../assets/JASH.png";
+import "./Footer.css";
+
+const teams = [
+  { name: "Hiba Abdel Karim", github: "", linkedin: "", instagram: "" },
+  { name: "Abdel Raouf Dannaoui", github: "", linkedin: "", instagram: "" },
+  { name: "Joseph Tarrazi", github: "", linkedin: "", instagram: "" },
+  { name: "Samira al samargi", github: "", linkedin: "", instagram: "" },
+];
 
 export default function Footer() {
   return (
@@ -23,19 +30,19 @@ export default function Footer() {
               </p>
             </div>
             <div className="col-md-4 col-lg-4 offset-lg-1 footer-contact wow fadeInDown animated ourTeam">
-              
-              <h3>Our Team</h3><br/>
-              <div className = "d-space-around ">
-                <p className = "font-size">Hiba Abdel Karim</p>
-                <p className = "font-size">AbdelRaouf Dannaoui</p>
-                <p className = "font-size">Samira Samargi</p>
-                <p className = "font-size">Joseph Tarrazi</p>
+              <h3>Our Team</h3>
+              <br />
+              <div className="d-space-around ">
+                {teams &&
+                  teams.map((member) => (
+                    <p className="font-size">{member.name}</p>
+                  ))}
               </div>
-              
             </div>
 
             <div className="col-md-4 col-lg-3 footer-social wow fadeInUp animated">
-              <h3>Follow us</h3><br/>
+              <h3>Follow us</h3>
+              <br />
               <Icons />
             </div>
           </div>
@@ -45,61 +52,39 @@ export default function Footer() {
   );
 }
 
-function Icons({ account }) {
+function Icons() {
   return (
-    <p className="social-media-p">   
+    <p className="social-media-p">
+      <div className="d-space-around">
+        {teams &&
+          teams.map((git) => (
+            <a href={git.github} className="social-media-icons raoufIcon">
+              <i className="fab fa-github"></i>
+            </a>
+          ))}
+      </div>
 
-      
-        <div className="d-space-around">
-          <a href="#" className="social-media-icons raoufIcon">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="#" className="social-media-icons raoufIcon">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="#" className="social-media-icons raoufIcon">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="#" className="social-media-icons raoufIcon">
-            <i className="fab fa-github"></i>
-          </a>
-        </div>
-      
+      <div className="d-space-around">
+        {teams &&
+          teams.map((lkn) => (
+            <a
+              href={lkn.linkedin}
+              target="_blank"
+              className="social-media-icons raoufIcon"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+          ))}
+      </div>
 
-      
-        {/* raouf linkedin style  */}
-        <div className="d-space-around">
-          <a href="https://www.linkedin.com/in/hiba-abdel-karim-8524361bb/" target="_blank" className="social-media-icons raoufIcon">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/abdel-raouf-dannaoui-7907a91b8/" target="_blank" className="social-media-icons raoufIcon">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/samira-el-samargi-7b97451b0/" target="_blank" className="social-media-icons raoufIcon">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/joseph-tarrazi-2a7067137/" target="_blank" className="social-media-icons raoufIcon">
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </div>
-      
-
-      
-        <div className="d-space-around">
-          <a href="#" className="social-media-icons raoufIcon">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#" className="social-media-icons raoufIcon">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#" className="social-media-icons raoufIcon">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#" className="social-media-icons raoufIcon">
-            <i className="fab fa-instagram"></i>
-          </a>
-        </div>
-      
+      <div className="d-space-around">
+        {teams &&
+          teams.map((insta) => (
+            <a href={insta.instagram} className="social-media-icons raoufIcon">
+              <i className="fab fa-instagram"></i>
+            </a>
+          ))}
+      </div>
     </p>
   );
 }

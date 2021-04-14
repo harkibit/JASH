@@ -7,7 +7,7 @@ export default function Genres(props) {
     "ZDJmYTdhZDFlMjZhZjA4NDdkMzQ5ZDdkYmQ1ZjkzZTU="
   )}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=`;
 
-  const Fetching = () => {
+  const fetchGenre = () => {
     fetch(url + genreid)
       .then((response) => response.json())
       .then((data) => {
@@ -16,33 +16,20 @@ export default function Genres(props) {
   };
 
   useEffect(() => {
-    Fetching();
+    fetchGenre();
   }, [genreid]);
 
-  const darkbg = {
-    backgroundColor: "black",
-    color: "white",
-    width: 150 + "px",
-    outline: "none",
-    border: "none",
-    marginLeft: 10 + "px",
-    height: 41 + "px",
-  };
-  const options_style = {
-    fontSize: 20 + "px",
-    border: "none",
-  };
   return (
     <div>
       <select
-        style={darkbg}
+        className="darkbg"
         onChange={(e) => {
           setGenreId(e.target.value);
         }}
       >
         {props.genre.map((item) => {
           return (
-            <option key={item.id} value={item.id} style={options_style}>
+            <option key={item.id} value={item.id} className="options">
               {item.name}
             </option>
           );

@@ -1,0 +1,14 @@
+.darkbg {
+  background-color: black;
+  color: white;
+  width: 150px;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  height: 41px;
+}
+
+.options {
+  font-size: 20px;
+  border: none;
+}
