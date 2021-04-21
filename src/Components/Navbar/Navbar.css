@@ -1,6 +1,10 @@
 .navbar {
   background-color: black;
 }
+.navbar-brand >h3{
+  font-family: "Saira Condensed", sans-serif;
+
+}
 .o-dropdown-menu {
   background-color: black;
   margin-left: 20px;

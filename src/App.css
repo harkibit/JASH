@@ -3,13 +3,8 @@
   font-size: 20px;
 }
 .App {
-  font-family: sans-serif;
   text-align: center;
-  min-height: 100vh;
   background-color: black;
-}
-
-.dark-mode {
   color: white;
 }
 .logo {

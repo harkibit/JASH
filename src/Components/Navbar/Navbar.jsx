@@ -29,7 +29,7 @@ export default function Navbar(props) {
             <img src={logo} alt="JASH logo" className="logo" />
           </Link>
           <Link to="/" className="navbar-brand">
-              <h3>JASH</h3>
+            <h3>JASH</h3>
           </Link>
 
           <button
@@ -45,14 +45,6 @@ export default function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <Link to="/about">
-                <li className="nav-item">
-                  <Link className="nav-link active" to="/about">
-                    <h3>About</h3>
-                  </Link>
-                </li>
-              </Link>
-
               <li className="nav-item dropdown">
                 <Genres
                   genre={genresNamesArray}
@@ -68,7 +60,6 @@ export default function Navbar(props) {
               handleMovies={props.handleMovies}
             />
           </div>
-          <hr />
         </div>
       </nav>
     </div>

@@ -25,7 +25,6 @@ function SingleMovie() {
       .then((response) => response.json())
       .then((data) => {
         setThatMovie(data);
-        console.log(data.poster_path)
       });
   }, []);
 
@@ -59,7 +58,6 @@ function SingleMovie() {
               <span className = "overview">{thatMovie?.overview}</span>
               <div className = "date-rate">
                 <Button text = " Watch trailer" onClick = {handleOpen}/>
-                <Button text = "See all actors"/>
               </div>
             </div>
           </div>

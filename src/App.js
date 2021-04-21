@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="App dark-mode">
+      <div className="App">
         <Navbar
           handleQuery={handleQuery}
           query={query}

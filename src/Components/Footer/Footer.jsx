@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="footer-top">
         <div className="container">
           <div className="row">
-            <div className="col-md-4 col-lg-4 footer-about wow fadeInUp animated">
+            <div className="col-md-4 col-lg-4 footer-about">
               <img
                 className="logo-footer"
                 src={logo}
@@ -30,7 +30,7 @@ export default function Footer() {
                 smart TV, game console, PC, Mac, mobile, tablet and more.
               </p>
             </div>
-            <div className="col-md-4 col-lg-4 offset-lg-1 footer-contact wow fadeInDown animated ourTeam">
+            <div className="col-md-4 col-lg-4 offset-lg-1 footer-contact ourTeam">
               <h3>Our Team</h3>
               <br />
               <div className="d-space-around ">
@@ -41,7 +41,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="col-md-4 col-lg-3 footer-social wow fadeInUp animated">
+            <div className="col-md-4 col-lg-3 footer-social">
               <h3>Follow us</h3>
               <br />
               <p className="social-media-p">
